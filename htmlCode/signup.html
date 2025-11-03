@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up | HorseStore</title>
+    <!-- Icon Web -->
+        <link rel="icon" href="../img/WhatsApp Image 2025-10-04 at 20.25.39_649cedcd (1).jpg">
+    <!-- File Css -->
+        <link rel="stylesheet" href="../cssCode/signup.css">
+    <!-- File Js -->
+        <script defer src="../jsCode/signup.js"></script>
+</head>
+<body>
+    <div class="auth-container">
+        <img src="../img/WhatsApp_Image_2025-10-04_at_20.25.39_7c49b4dd-removebg-preview.png" alt="Logo" />
+        <h2>Create Account</h2>
+        <form class="auth-form" id="signupForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email Address" required />
+        <input type="password" id="password" placeholder="Password" required />
+        <div onclick="ShowPassword()" id="changeEye" class="eye"><i class="fa-solid fa-eye-slash"></i></div>
+        <button type="submit">Sign Up</button>
+        </form>
+        <div class="auth-footer">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>

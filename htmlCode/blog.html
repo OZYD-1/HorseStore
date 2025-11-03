@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HorseStore | Blog</title>
+
+    <!-- Icon -->
+    <link rel="icon" href="../img/WhatsApp Image 2025-10-04 at 20.25.39_649cedcd (1).jpg"/>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../cssCode/horse.css" />
+
+    <!-- Blog CSS -->
+     <link rel="stylesheet" href="../cssCode/blog.css">
+
+    <!-- Swiper JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Main JS -->
+    <script defer src="../jsCode/horse.js"></script>
+    <!-- Responsive Css -->
+    <link rel="stylesheet" href="../cssCode/responsive.css">
+  </head>
+  <body>
+    <!-- Item Cart -->
+    <div class="cart">
+  <div class="top_cart">
+    <h3>Cart Items : <span class="Count_item_cart">0</span></h3>
+    <span onclick="open_close_cart()" class="close_cart">
+      <i class="fa-regular fa-circle-xmark"></i>
+    </span>
+  </div>
+  <div class="items_in_cart" id="cart_items"></div>
+  <div class="bottom_cart">
+    <div class="total">
+      <p class="sup-color">SupTotal</p>
+      <p class="price_cart_toral">$0</p>
+    </div>
+    <div class="button_cart">
+      <a href="../htmlCode/checkout.html" class="btn_cart btn color-check">
+        <p>Checkout</p>
+      </a>
+      <a href="../index.html"><span class="btn_cart trans_bg btn">Shop More</span></a>
+    </div>
+  </div>
+    </div>
+    <!-- Item Favourite -->
+        <div class="Favourite">
+            <div class="top_fav">
+                <h3>Favourite Items : <span class="Count_item_fav">0</span></h3>
+                <span onclick="open_close_fav()" class="close_fav"><i class="fa-regular fa-circle-xmark"></i></span>
+            </div>
+            <div class="items_in_fav" id="fav_items">
+                 <!-- Items fiv -->
+            </div>
+            <div class="button_fav">
+              <a href="../index.html"><span class="btn_fav trans_bg btn">Shop More</span></a> 
+            </div>
+        </div>
+    <!-- Header -->
+    <header>
+      <div class="top-header">
+        <div class="container">
+          <a href="../index.html" class="logo-header"
+            ><img
+              src="../img/WhatsApp_Image_2025-10-04_at_20.25.39_7c49b4dd-removebg-preview.png"
+          /></a>
+          <form action="" class="search-box">
+            <div class="select-box">
+              <select id="category" name="category">
+                <option value="All Categories">All Categories</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Appliances">Appliances</option>
+                <option value="Phones & Taplet">Phones</option>
+              </select>
+            </div>
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search For Products"
+              required
+            />
+            <button type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </form>
+          <!-- DarkMode -->
+                    <div class="container vh-100 d-flex justify-content-center align-items-center">
+                        <div class="one-quarter" id="switch">
+                            <input type="checkbox" class="checkbox" id="chk" />
+                            <label class="label" for="chk">
+                                <i class="fas fa-moon"></i>
+                                <i class="fas fa-sun"></i>
+                                <div class="ball"></div>
+                            </label>
+                        </div>
+                    </div>
+          <div class="header_icons">
+            <div onclick="open_close_fav()" class="icon">
+              <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i></a>
+              <span class="count count-favourite">0</span>
+            </div>
+            <div onclick="open_close_cart()" class="icon">
+              <a href="javascript:void(0)"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+              <span class="count count_item_header">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom_header">
+        <div class="container">
+          <nav class="nav">
+            <div class="category_nav">
+              <div onclick="open_category_list()" class="category_btn">
+                <i class="fa-solid fa-bars"></i>
+                <p>Browse Category</p>
+                <i class="fa-solid fa-angle-down"></i>
+              </div>
+              <div class="category_nav_list">
+                <a href="../index.html#7Top">Top 7 Offers</a>
+                <a href="../index.html#Accessories">Electronics</a>
+                <a href="../index.html#appliances">Appliances</a>
+                <a href="../index.html#mobiles">Phones</a>
+              </div>
+            </div>
+            <ul class="nav_links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="../index.html#Accessories">Accessories</a></li>
+              <li class="active"><a href="blog.html">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+          <div class="login_sigup btns">
+            <a href="./login.html" class="btn"
+              >Login <i class="fa-solid fa-arrow-right-to-bracket"></i
+            ></a>
+            <a href="./signup.html" class="btn"
+              >Sign Up <i class="fa-solid fa-user-plus"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+      <h1>Welcome to <strong>Horse</strong>Store – Power Up Your World</h1>
+      <p>Your trusted destination for technology, electronics, and innovation.</p>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blog-content">
+      <div class="blog-container">
+        <h2>Discover HorseStore</h2>
+        <p>
+          At <strong>HorseStore</strong>, we believe technology should empower, inspire, and simplify your life. 
+          Whether you're looking for the latest smartphones, home appliances, or electronics accessories, 
+          our mission is to bring you quality and innovation in one place.
+        </p>
+
+        <p>
+          Founded with a vision to make high-quality tech accessible to everyone, 
+          HorseStore offers an ever-growing collection of products carefully curated for performance, durability, and value.
+          We understand that technology is more than gadgets—it's a part of your daily rhythm.
+        </p>
+
+        <img src="../img/WhatsApp_Image_2025-10-04_at_20.25.39_7c49b4dd-removebg-preview.png" alt="HorseStore products"/>
+
+        <p>
+          Our commitment to customer satisfaction drives everything we do. 
+          From our sleek website design to secure checkout and fast delivery, 
+          every detail is crafted to give you a smooth shopping experience.
+          With easy navigation, dynamic product displays, and a responsive layout, 
+          our website ensures that browsing HorseStore feels effortless and enjoyable.
+        </p>
+
+        <p>
+          Whether you're upgrading your home setup, finding the perfect phone, or exploring new tech trends, 
+          HorseStore is your trusted companion. We continue to grow, innovate, and serve you better every day.
+        </p>
+
+        <p>
+          <strong>HorseStore – where performance meets passion.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+      <div class="footer-container">
+        <div class="row">
+          <div class="col-lg-4 footer-section">
+            <div class="footer-logo">HORSEstore</div>
+            <p class="footer-about">
+              🐎 Horse Store – Power up your world with the latest phones, screens & electronics.<br />Top
+              quality. Best prices. Fast delivery.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://github.com/OZYD-1"
+                class="social-icon"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <a
+                href="https://www.facebook.com/zaid.smadi.9659/?locale=ar_AR"
+                class="social-icon"
+                target="_blank"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/z.a.i.d_sm5/#"
+                class="social-icon"
+                target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/zaid-al-smadi-61a90133a/"
+                class="social-icon"
+                target="_blank"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-section">
+            <h5>Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="./index.html#Accessories">Accessories</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-section">
+            <h5>Support</h5>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Contact Support</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 footer-section">
+            <h5>Newsletter</h5>
+            <p class="footer-about">
+              Subscribe to our newsletter for updates, news, and exclusive offers.
+            </p>
+            <div class="footer-newsletter">
+              <input type="email" placeholder="Enter your email" />
+              <button class="newsletter-btn">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <ul class="footer-bottom-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+          <p>© 2025 <span>HorseShop</span>. All rights reserved.</p>
+          <p>Creat By <strong>OZYD</strong></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

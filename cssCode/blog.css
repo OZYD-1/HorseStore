@@ -1,0 +1,69 @@
+:root {
+    --main_color : #cf9b0e ;
+    --p_color : #735607 ;
+    --bg_color : #F3F3F3 ;
+    --white_color : #fff ;
+    --color_heading : #121416 ;
+    --boder_color : #e5e5e5d5 ;
+    --Sale_color : #e68e0b ;
+}
+.blog-hero {
+background: linear-gradient(
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)
+    ),
+    url("https://png.pngtree.com/thumb_back/fh260/background/20231001/pngtree-d-rendering-of-laptop-computer-on-work-desk-offering-a-top-image_13563491.png")
+    center/cover no-repeat;
+height: 70vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+text-align: center;
+flex-direction: column;
+}
+.blog-hero h1 {
+font-size: 3rem;
+margin-bottom: 10px;
+color: #fff;
+}
+.blog-hero p {
+font-size: 1.2rem;
+color: #ddd;
+}
+strong {
+    color: var(--main_color);
+}
+.blog-content {
+background: var(--bg_color);
+padding: 60px 15px;
+}
+.blog-container {
+max-width: 850px;
+margin: auto;
+background: #fff;
+padding: 40px;
+border-radius: 8px;
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+.blog-container h2 {
+color: #121416;
+margin-bottom: 20px;
+text-shadow: 3px 2px 3px rgba(1 1 1 / 50%);
+}
+.blog-container p {
+color: #735607;
+line-height: 1.8;
+margin-bottom: 20px;
+font-size: 1rem;
+}
+.blog-container img {
+width: 20%;
+border-radius: 8px;
+margin: 20px 280px;
+}
+@media (max-width: 768px) {
+.blog-hero h1 {
+    font-size: 2rem;
+}
+}
