@@ -672,6 +672,7 @@ input {
     -webkit-box-orient:vertical;
 }
 .delete_item {
+    color: var(--color_heading);
     background: transparent;
 }
 .cart .items_in_cart .item_cart .delete_item i ,
