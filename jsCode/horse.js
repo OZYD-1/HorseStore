@@ -39,6 +39,8 @@ setTimeout(() => {
 }, 50);
 
 // Item's home
+const isSubPage = window.location.pathname.includes("htmlCode");
+const pathPrefix = isSubPage ? "../" : "";
 fetch('products.json')
 .then(response => response.json())
 .then(data => {
@@ -56,7 +58,7 @@ fetch('products.json')
                 <div class="swiper-slide product">
                             <span class="sale_present">%${percent_dis}</span>
                             <div class="img-product">
-                                <a href="javascript:void(0)"><img src="${product.img}"></a>
+                                <a href="javascript:void(0)"><img src="${pathPrefix}${product.img}"></a>
                             </div>
                             <div class="stars">
                                 <i class="fa-solid fa-star"></i>
@@ -96,7 +98,7 @@ fetch('products.json')
                     <div class="swiper-slide product">
                                 ${percent_dis_div}
                                 <div class="img-product">
-                                    <a href="javascript:void(0)"><img src="${product.img}"></a>
+                                    <a href="javascript:void(0)"><img src="${pathPrefix}${product.img}"></a>
                                 </div>
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -136,7 +138,7 @@ fetch('products.json')
                     <div class="swiper-slide product">
                                 ${percent_dis_div}
                                 <div class="img-product">
-                                    <a href="javascript:void(0)"><img src="${product.img}"></a>
+                                    <a href="javascript:void(0)"><img src="${pathPrefix}${product.img}"></a>
                                 </div>
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -176,7 +178,7 @@ fetch('products.json')
                     <div class="swiper-slide product">
                                 ${percent_dis_div}
                                 <div class="img-product">
-                                    <a href="javascript:void(0)"><img src="${product.img}"></a>
+                                    <a href="javascript:void(0)"><img src="${pathPrefix}${product.img}"></a>
                                 </div>
                                 <div class="stars">
                                     <i class="fa-solid fa-star"></i>
@@ -305,7 +307,7 @@ function updateCart() {
         
         CartItemsContainer.innerHTML += `
             <div class="item_cart">
-                    <img src="../${item.img}">
+                    <img src="${pathPrefix}${item.img}">
                     <div class="content">
                         <h4>${item.name}</h4>
                         <p class="price_cart">$${totalPriceItem}</p>
@@ -322,7 +324,7 @@ function updateCart() {
             checkout_items.innerHTML += `
                 <div class="item_cart">
                                 <div class="image_name">
-                                    <img src="../${item.img}" alt="">
+                                    <img src="${pathPrefix}${item.img}" alt="">
                                     <div class="content">
                                         <h4>${item.name}</h4>
                                         <p class="price_cart">$${totalPriceItem}</p>
@@ -449,7 +451,7 @@ function updateFavourite() {
   fav.forEach((item, index) => {
     favContainer.innerHTML += `
       <div class="item_fav">
-        <img src="../${item.img}">
+        <img src="${pathPrefix}${item.img}">
         <div class="content">
           <h4>${item.name}</h4>
           <p class="price_cart">$${item.price}</p>
