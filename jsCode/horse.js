@@ -449,7 +449,7 @@ function updateFavourite() {
   fav.forEach((item, index) => {
     favContainer.innerHTML += `
       <div class="item_fav">
-        <img src="${item.img}">
+        <img src="../${item.img}">
         <div class="content">
           <h4>${item.name}</h4>
           <p class="price_cart">$${item.price}</p>
