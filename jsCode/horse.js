@@ -305,7 +305,7 @@ function updateCart() {
         
         CartItemsContainer.innerHTML += `
             <div class="item_cart">
-                    <img src="${item.img}">
+                    <img src="../${item.img}">
                     <div class="content">
                         <h4>${item.name}</h4>
                         <p class="price_cart">$${totalPriceItem}</p>
@@ -322,7 +322,7 @@ function updateCart() {
             checkout_items.innerHTML += `
                 <div class="item_cart">
                                 <div class="image_name">
-                                    <img src="${item.img}" alt="">
+                                    <img src="../${item.img}" alt="">
                                     <div class="content">
                                         <h4>${item.name}</h4>
                                         <p class="price_cart">$${totalPriceItem}</p>
