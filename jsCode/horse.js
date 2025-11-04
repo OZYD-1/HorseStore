@@ -39,7 +39,7 @@ setTimeout(() => {
 }, 50);
 
 // Item's home
-fetch('../products.json')
+fetch('products.json')
 .then(response => response.json())
 .then(data => {
     const cart = JSON.parse(localStorage.getItem('cart')) || []
@@ -209,7 +209,7 @@ setTimeout(() => {
   favButtons.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       const id = btn.getAttribute('data-id');
-      const response = await fetch('../products.json');
+      const response = await fetch('products.json');
       const data = await response.json();
       const product = data.find(p => p.id == id);
 
@@ -239,7 +239,7 @@ function open_close_cart() {
     cart.classList.toggle("active");
 }
 // action cart
-fetch('../products.json')
+fetch('products.json')
 .then(response => response.json())
 .then(data => {
     const AddToCartButtons = document.querySelectorAll('.btn_add_cart');
